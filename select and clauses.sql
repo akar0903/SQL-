@@ -15,6 +15,9 @@ VALUES (3,'Namit',1200000,'Dot Net',44501,34);
 INSERT into employee_info(empId,empName,empSalary,job,phone,deptID)
 VALUES (4,'Arun',1000000,'Tester',77501,34);
 
+INSERT into employee_info(empId,empName,empSalary,job,phone,deptID)
+VALUES (5,'Kota',1100000,'Sr Manager',99501,11);
+
 UPDATE employee_info 
 SET empName = 'Jatin' -- query changes and updates name
 WHERE empName = 'Arun';
@@ -27,6 +30,9 @@ UPDATE employee_info SET empSalary = empSalary+50000; -- query changes and updat
 
 UPDATE employee_info SET job = 'Manager'
 WHERE empName = 'Arun' -- query changes and updates job for particular name
+
+DELETE from employee_info 
+WHERE deptID = 11; -- Deletes a particular thing according to condition
 
 SELECT empName,job,empSalary --selects the particular column
 FROM employee_info -- from the table
